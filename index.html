@@ -642,7 +642,7 @@ document.getElementById('donateForm').addEventListener('submit',async function(e
     const inner=document.getElementById('donorTickerInner');
     const html=items.join('');
     inner.innerHTML=html+html;
-    inner.style.animationDuration=Math.max(15,donors.length*6)+'s';
+    inner.style.animationDuration=Math.max(8,donors.length*3)+'s';
     document.getElementById('donorTicker').style.display='block';
   }catch(e){console.warn('Ticker:',e)}
 })();
