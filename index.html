@@ -73,6 +73,12 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.15)}
 .hero-stat{text-align:center}
 .hero-stat .number{font-family:var(--font-heading);font-weight:800;font-size:2rem;color:var(--gold-light)}
 .hero-stat .label{font-size:0.85rem;color:rgba(255,255,255,0.7);margin-top:4px}
+.donor-ticker{background:var(--blue);border-top:1px solid rgba(255,255,255,0.1);overflow:hidden;white-space:nowrap;padding:10px 0}
+.donor-ticker-inner{display:inline-flex;gap:32px;animation:tickerScroll 30s linear infinite;padding-left:100%}
+.donor-ticker-inner:hover{animation-play-state:paused}
+.donor-item{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.85);font-size:0.85rem;font-weight:500}
+.donor-item .heart{color:var(--gold);width:14px;height:14px;flex-shrink:0}
+@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* INTRO */
 .intro{padding:80px 0;background:var(--white)}
@@ -269,6 +275,11 @@ Donate to Support the Team
 </div>
 </div>
 </section>
+
+<!-- DONOR TICKER -->
+<div class="donor-ticker" id="donorTicker" aria-label="Recent donors" style="display:none">
+<div class="donor-ticker-inner" id="donorTickerInner"></div>
+</div>
 
 <!-- INTRO -->
 <section class="intro" id="about" aria-label="About Odyssey of the Mind">
@@ -542,6 +553,10 @@ Donate Now
 <label for="d-phone">Phone</label>
 <input type="tel" id="d-phone" name="phone" placeholder="(555) 123-4567">
 </div>
+<div class="form-group" style="display:flex;align-items:center;gap:8px">
+<input type="checkbox" id="d-anonymous" name="anonymous" value="true" style="width:auto;margin:0">
+<label for="d-anonymous" style="margin:0;cursor:pointer;font-size:0.9rem">Keep my name anonymous</label>
+</div>
 <button type="submit" class="btn btn-primary">Continue to PayPal</button>
 </div>
 </form>
@@ -611,6 +626,23 @@ document.getElementById('donateForm').addEventListener('submit',async function(e
   }catch(err){console.error('Form error:',err)}
   window.location.href='https://www.paypal.com/donate/?hosted_button_id=RXF2K8U4W64JY';
 });
+
+// Donor ticker
+(async function(){
+  try{
+    const res=await fetch('https://myaieditor.com/api/donors?site=omteam');
+    if(!res.ok)return;
+    const donors=await res.json();
+    if(!donors.length)return;
+    const heart='<svg class="heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>';
+    const items=donors.map(d=>'<span class="donor-item">'+heart+(d.anonymous?'Anonymous donation':'Thank you, '+d.name+'!')+'</span>');
+    const inner=document.getElementById('donorTickerInner');
+    const html=items.join('');
+    inner.innerHTML=html+html;
+    inner.style.animationDuration=Math.max(15,donors.length*6)+'s';
+    document.getElementById('donorTicker').style.display='block';
+  }catch(e){console.warn('Ticker:',e)}
+})();
 </script>
 
 </body>
