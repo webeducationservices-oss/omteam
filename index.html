@@ -92,8 +92,11 @@ nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.15)}
 /* WHY SUPPORT */
 .why-support{padding:80px 0;background:var(--white)}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
-.cost-cards{display:grid;gap:12px;margin-top:24px}
+.cost-label{font-family:var(--font-heading);font-weight:700;font-size:0.95rem;color:var(--blue);margin-top:24px;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.04em}
+.stretch-label{color:var(--gray-600)}
+.cost-cards{display:grid;gap:12px}
 .cost-card{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--off-white);border-radius:12px;border-left:4px solid var(--gold)}
+.stretch-card{border-left-style:dashed;border-left-color:var(--gray-600);opacity:0.75}
 .cost-card .icon{color:var(--blue-light);width:24px;height:24px}
 .why-img-wrap{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.1)}
 
@@ -322,18 +325,18 @@ Traveling to Ames, Iowa &mdash; May 27 to 30, 2026
 <p class="section-label">Where Funds Go</p>
 <h2 class="section-title">Why Your Support Matters</h2>
 <p class="section-sub">The $4,200 goal covers team registration and prop transportation to World Finals. Any donations beyond that goal will go toward airfare and lodging for students.</p>
+<p class="cost-label">Your $4,200 covers:</p>
 <div class="cost-cards">
 <div class="cost-card">
 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg></span>
 Team registration &amp; prop transportation
 </div>
-<div class="cost-card" style="opacity:0.65">
-<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
-Airfare for students<br><small style="font-weight:400;opacity:0.8">stretch goal</small>
 </div>
-<div class="cost-card" style="opacity:0.65">
-<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V10"/></svg></span>
-Lodging &amp; meals for students<br><small style="font-weight:400;opacity:0.8">stretch goal</small>
+<p class="cost-label stretch-label">If we exceed our goal:</p>
+<div class="cost-cards">
+<div class="cost-card stretch-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+Airfare, lodging &amp; meals for students
 </div>
 </div>
 </div>
