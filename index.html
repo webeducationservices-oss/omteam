@@ -366,7 +366,7 @@ Airfare, lodging &amp; meals for students
 <p>Whether you give as an individual, a family, or a local business, your support helps send Longleaf's team to World Finals.</p>
 <div class="progress-wrap">
 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-<div class="progress-labels"><span>$575 raised</span><span>$4,200 goal</span></div>
+<div class="progress-labels"><span>$630 raised</span><span>$4,200 goal</span></div>
 </div>
 <a href="#" class="btn btn-primary" onclick="openModal();return false">
 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
@@ -583,7 +583,7 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
 document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');btn.setAttribute('aria-expanded',!wasOpen)})});
 
 // Progress bar animation on scroll
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.getElementById('progressFill').style.width='13.7%';obs.disconnect()}})},{threshold:0.5});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.getElementById('progressFill').style.width='15%';obs.disconnect()}})},{threshold:0.5});
 obs.observe(document.querySelector('.progress-wrap'));
 
 // Close mobile nav on link click
