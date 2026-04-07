@@ -613,6 +613,7 @@ document.getElementById('donateForm').addEventListener('submit',async function(e
   if(this.querySelector('[name="_honey"]').value)return;
   const btn=this.querySelector('[type="submit"]');
   btn.disabled=true;btn.textContent='Submitting...';
+  const paypalUrl='https://www.paypal.com/donate/?hosted_button_id=RXF2K8U4W64JY';
   try{
     if(typeof grecaptcha!=='undefined'){
       try{
@@ -621,10 +622,12 @@ document.getElementById('donateForm').addEventListener('submit',async function(e
       }catch(re){console.warn('reCAPTCHA error:',re)}
     }
     const formData=new FormData(this);
+    // Ensure anonymous field is present (unchecked checkboxes are omitted from FormData)
+    if(!formData.has('anonymous'))formData.set('anonymous','false');
     const data=Object.fromEntries(formData.entries());
     await fetch('https://myaieditor.com/api/form-notify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
   }catch(err){console.error('Form error:',err)}
-  window.location.href='https://www.paypal.com/donate/?hosted_button_id=RXF2K8U4W64JY';
+  window.location.href=paypalUrl;
 });
 
 // Donor ticker
