@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help Longleaf OM Go to World Finals</title>
+<meta name="description" content="Support Longleaf Elementary's Odyssey of the Mind team as they raise $4,200 for World Finals in Ames, Iowa.">
+<meta property="og:title" content="Help Longleaf OM Go to World Finals">
+<meta property="og:description" content="Support Longleaf Elementary's Odyssey of the Mind team as they raise $4,200 for World Finals in Ames, Iowa.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://omteam.org">
+<link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-700.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-400.woff2" crossorigin>
+<link rel="preload" as="image" type="image/webp" href="images/hero-trophy.webp" fetchpriority="high">
+<style>
+@font-face{font-family:'Montserrat';src:url('fonts/montserrat-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat';src:url('fonts/montserrat-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('fonts/inter-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('fonts/inter-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('fonts/inter-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Inter';src:url('fonts/inter-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Montserrat Fallback';src:local('Arial');size-adjust:112%;ascent-override:85%;descent-override:22%;line-gap-override:0%}
+@font-face{font-family:'Inter Fallback';src:local('Arial');size-adjust:107%;ascent-override:90%;descent-override:23%;line-gap-override:0%}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#1a3a6b;--blue-light:#2a5298;--gold:#d4a843;--gold-light:#f0d078;--white:#ffffff;--off-white:#f8f9fc;--gray-50:#f0f2f5;--gray-100:#e2e5ea;--gray-600:#4a5568;--gray-800:#1a202c;--font-heading:'Montserrat','Montserrat Fallback',Arial,sans-serif;--font-body:'Inter','Inter Fallback',Arial,sans-serif;--max-w:1140px}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--gray-800);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.icon{width:20px;height:20px;display:inline-block;vertical-align:middle;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:16px 32px;border-radius:8px;font-family:var(--font-heading);font-weight:700;font-size:1rem;letter-spacing:0.02em;transition:all 0.3s ease;cursor:pointer;border:none}
+.btn-primary{background:var(--gold);color:var(--blue);box-shadow:0 4px 14px rgba(212,168,67,0.35)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,168,67,0.45)}
+.btn-secondary{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.6)}
+.btn-secondary:hover{background:rgba(255,255,255,0.1);border-color:var(--white)}
+.btn-outline{background:transparent;color:var(--blue);border:2px solid var(--blue)}
+.btn-outline:hover{background:var(--blue);color:var(--white)}
+.section-label{font-family:var(--font-heading);font-weight:700;font-size:0.8rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.section-title{font-family:var(--font-heading);font-weight:800;font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.2;color:var(--blue);margin-bottom:16px}
+.section-sub{font-size:1.1rem;color:var(--gray-600);max-width:640px;line-height:1.7}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,58,107,0.95);backdrop-filter:blur(10px);padding:12px 0;transition:box-shadow 0.3s}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.15)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:var(--font-heading);font-weight:800;font-size:1.1rem;color:var(--white);display:flex;align-items:center;gap:8px}
+.nav-logo .icon{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{color:rgba(255,255,255,0.85);font-size:0.9rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--gold);color:var(--blue);padding:8px 20px;border-radius:6px;font-weight:700;font-size:0.85rem;transition:all 0.2s}
+.nav-cta:hover{background:var(--gold-light)}
+.mobile-toggle{display:none;background:none;border:none;cursor:pointer;color:var(--white);padding:4px}
+.mobile-toggle .icon{width:28px;height:28px}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background:var(--blue)}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,58,107,0.92) 0%,rgba(42,82,152,0.8) 50%,rgba(26,58,107,0.7) 100%)}
+.hero-content{position:relative;z-index:2;padding:140px 0 80px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(212,168,67,0.15);border:1px solid rgba(212,168,67,0.4);color:var(--gold-light);padding:8px 16px;border-radius:50px;font-size:0.85rem;font-weight:600;margin-bottom:24px}
+.hero h1{font-family:var(--font-heading);font-weight:800;font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;color:var(--white);max-width:720px;margin-bottom:20px;min-height:120px}
+.hero-sub{font-size:clamp(1rem,2vw,1.2rem);color:rgba(255,255,255,0.85);max-width:600px;line-height:1.7;margin-bottom:36px;min-height:72px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:16px}
+.hero-stats{display:flex;gap:48px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.15)}
+.hero-stat{text-align:center}
+.hero-stat .number{font-family:var(--font-heading);font-weight:800;font-size:2rem;color:var(--gold-light)}
+.hero-stat .label{font-size:0.85rem;color:rgba(255,255,255,0.7);margin-top:4px}
+
+/* INTRO */
+.intro{padding:80px 0;background:var(--white)}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.intro-img{border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.1)}
+.intro-img img{width:100%;height:100%;object-fit:cover}
+
+/* ACHIEVEMENT */
+.achievement{padding:80px 0;background:var(--off-white)}
+.ach-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.ach-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.ach-list li{display:flex;align-items:flex-start;gap:12px;font-size:1.05rem}
+.ach-list .icon{color:var(--gold);width:24px;height:24px;margin-top:2px}
+.ach-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ach-photos img{border-radius:12px;width:100%;height:200px;object-fit:cover}
+
+/* WHY SUPPORT */
+.why-support{padding:80px 0;background:var(--white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.cost-cards{display:grid;gap:12px;margin-top:24px}
+.cost-card{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--off-white);border-radius:12px;border-left:4px solid var(--gold)}
+.cost-card .icon{color:var(--blue-light);width:24px;height:24px}
+.why-img-wrap{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.1)}
+
+/* DONATION BAND */
+.donate-band{padding:60px 0;background:linear-gradient(135deg,var(--blue) 0%,var(--blue-light) 100%);text-align:center;color:var(--white)}
+.donate-band h2{font-family:var(--font-heading);font-weight:800;font-size:clamp(1.5rem,3.5vw,2.2rem);margin-bottom:12px}
+.donate-band p{font-size:1.1rem;color:rgba(255,255,255,0.85);max-width:600px;margin:0 auto 32px}
+.progress-wrap{max-width:500px;margin:0 auto 32px}
+.progress-bar{height:12px;background:rgba(255,255,255,0.15);border-radius:6px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-light));border-radius:6px;width:0;transition:width 1.5s ease}
+.progress-labels{display:flex;justify-content:space-between;margin-top:8px;font-size:0.85rem;color:rgba(255,255,255,0.7)}
+
+/* SPONSOR LEVELS */
+.sponsors{padding:80px 0;background:var(--off-white)}
+.sponsor-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.sponsor-card{background:var(--white);border-radius:16px;padding:32px;text-align:center;border:2px solid var(--gray-100);transition:all 0.3s ease}
+.sponsor-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.08)}
+.sponsor-card .amount{font-family:var(--font-heading);font-weight:800;font-size:1.8rem;color:var(--blue);margin-bottom:4px}
+.sponsor-card .tier{font-family:var(--font-heading);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--gold);margin-bottom:16px}
+.sponsor-card p{color:var(--gray-600);font-size:0.95rem;line-height:1.6}
+.sponsor-card.featured{border-color:var(--gold);background:linear-gradient(180deg,rgba(212,168,67,0.04) 0%,var(--white) 100%)}
+
+/* GALLERY */
+.gallery{padding:80px 0;background:var(--white)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
+.gallery-grid img{border-radius:12px;width:100%;height:220px;object-fit:cover;transition:transform 0.3s}
+.gallery-grid img:hover{transform:scale(1.03)}
+
+/* COMMUNITY */
+.community{padding:80px 0;background:var(--off-white)}
+.comm-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.value-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.value-card{padding:24px;background:var(--white);border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.04)}
+.value-card .icon{color:var(--blue-light);width:28px;height:28px;margin-bottom:12px}
+.value-card h4{font-family:var(--font-heading);font-weight:700;font-size:0.95rem;color:var(--blue);margin-bottom:6px}
+.value-card p{font-size:0.9rem;color:var(--gray-600);line-height:1.5}
+
+/* FAQ */
+.faq{padding:80px 0;background:var(--white)}
+.faq-list{max-width:720px;margin:40px auto 0;display:flex;flex-direction:column;gap:8px}
+.faq-item{background:var(--off-white);border-radius:12px;overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;cursor:pointer;font-weight:600;font-size:1rem;border:none;background:none;width:100%;text-align:left;font-family:var(--font-body);color:var(--gray-800);transition:background 0.2s}
+.faq-q:hover{background:var(--gray-100)}
+.faq-q .icon{transition:transform 0.3s;color:var(--blue-light)}
+.faq-item.open .faq-q .icon{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding:0 24px}
+.faq-item.open .faq-a{max-height:200px;padding:0 24px 20px}
+.faq-a p{color:var(--gray-600);line-height:1.7;font-size:0.95rem}
+
+/* CONTACT */
+.contact{padding:80px 0;background:linear-gradient(135deg,var(--blue) 0%,var(--blue-light) 100%);color:var(--white);text-align:center}
+.contact h2{font-family:var(--font-heading);font-weight:800;font-size:clamp(1.75rem,4vw,2.5rem);margin-bottom:12px}
+.contact>div>p{color:rgba(255,255,255,0.8);font-size:1.1rem;margin-bottom:40px}
+.contact-cards{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:40px}
+.contact-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:32px;min-width:260px;text-align:center}
+.contact-card .icon{width:32px;height:32px;color:var(--gold-light);margin:0 auto 12px}
+.contact-card h4{font-family:var(--font-heading);font-weight:700;font-size:1rem;margin-bottom:8px}
+.contact-card a{color:var(--gold-light);font-weight:500;transition:color 0.2s}
+.contact-card a:hover{color:var(--white)}
+
+/* FOOTER */
+footer{background:var(--gray-800);color:rgba(255,255,255,0.6);padding:24px 0;text-align:center;font-size:0.85rem}
+
+/* MOBILE */
+@media(max-width:900px){
+.nav-links{display:none}
+.mobile-toggle{display:block}
+.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(26,58,107,0.98);padding:24px;gap:16px}
+.hero h1{min-height:100px}
+.hero-sub{min-height:90px}
+.hero-stats{gap:24px;flex-wrap:wrap}
+.intro-grid,.ach-grid,.why-grid,.comm-grid{grid-template-columns:1fr;gap:32px}
+.sponsor-cards{grid-template-columns:1fr}
+.gallery-grid{grid-template-columns:1fr 1fr}
+.value-cards{grid-template-columns:1fr}
+.ach-photos img{height:160px}
+.gallery-grid img{height:180px}
+}
+@media(max-width:480px){
+.hero-btns{flex-direction:column}
+.btn{width:100%;justify-content:center}
+.hero-stats{flex-direction:column;gap:16px;align-items:flex-start}
+.gallery-grid{grid-template-columns:1fr}
+.gallery-grid img{height:240px}
+.contact-cards{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Main navigation">
+<div class="container nav-inner">
+<a href="#" class="nav-logo">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+Longleaf OM
+</a>
+<div class="nav-links" id="navLinks">
+<a href="#about">About</a>
+<a href="#achievements">Achievements</a>
+<a href="#support">Why Give</a>
+<a href="#sponsors">Sponsor</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+<a href="https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368" class="nav-cta" target="_blank" rel="noopener">Donate</a>
+</div>
+<button class="mobile-toggle" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
+</button>
+</div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+<div class="hero-bg">
+<img src="images/hero-trophy.webp" alt="Longleaf Elementary Odyssey of the Mind team celebrating with trophy" width="1200" height="1594" fetchpriority="high">
+</div>
+<div class="container hero-content">
+<div class="hero-badge">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+World Finals &mdash; Ames, Iowa &bull; May 27&ndash;30, 2026
+</div>
+<h1>Help Send Longleaf Elementary's Odyssey of the Mind Team to World Finals</h1>
+<p class="hero-sub">The team finished 3rd at the Florida State Competition and has been invited to compete at the 2026 Odyssey of the Mind World Finals. They are raising $4,200 to help make the trip possible.</p>
+<div class="hero-btns">
+<a href="https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368" class="btn btn-primary" target="_blank" rel="noopener">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
+Donate to Support the Team
+</a>
+<a href="#sponsors" class="btn btn-secondary">Become a Sponsor</a>
+</div>
+<div class="hero-stats">
+<div class="hero-stat">
+<div class="number">3rd</div>
+<div class="label">Florida State</div>
+</div>
+<div class="hero-stat">
+<div class="number">$4,200</div>
+<div class="label">Fundraising Goal</div>
+</div>
+<div class="hero-stat">
+<div class="number">2026</div>
+<div class="label">World Finals</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" id="about" aria-label="About Odyssey of the Mind">
+<div class="container intro-grid">
+<div>
+<p class="section-label">About Odyssey of the Mind</p>
+<h2 class="section-title">Big Ideas. Creative Thinking. Real Opportunity.</h2>
+<p class="section-sub">Odyssey of the Mind is an international creative problem-solving program for students in grades K through 12. It encourages teamwork, imagination, and hands-on learning by challenging students to solve open-ended problems in creative ways.</p>
+<p class="section-sub" style="margin-top:16px">Students learn how to think, not what to think&mdash;and that is part of what makes this opportunity so special. For Longleaf Elementary's team, this is more than a competition. It is a chance to represent their school, their community, and the hard work they have put in all season on a world stage.</p>
+</div>
+<div class="intro-img">
+<img src="images/performance.webp" alt="Longleaf OM team performing with their creative set and props" width="800" height="602" loading="lazy">
+</div>
+</div>
+</section>
+
+<!-- ACHIEVEMENT -->
+<section class="achievement" id="achievements" aria-label="Achievements">
+<div class="container ach-grid">
+<div class="ach-photos">
+<img src="images/stage.webp" alt="Team on stage at state competition" width="600" height="797" loading="lazy">
+<img src="images/medals-stage.webp" alt="Team receiving medals on stage" width="600" height="797" loading="lazy">
+<img src="images/team-gym.webp" alt="Team celebrating with medals in gymnasium" width="600" height="451" loading="lazy">
+<img src="images/crowd-gym.webp" alt="Competition crowd in gymnasium" width="600" height="451" loading="lazy">
+</div>
+<div>
+<p class="section-label">A Season to Remember</p>
+<h2 class="section-title">Longleaf Has Earned a Spot on the World Stage</h2>
+<p class="section-sub">This team has already accomplished something incredible.</p>
+<ul class="ach-list">
+<li>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+Advanced from Regionals
+</li>
+<li>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+Placed 3rd at the Florida State Competition
+</li>
+<li>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+Earned an invitation to the 2026 World Finals
+</li>
+<li>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+Traveling to Ames, Iowa &mdash; May 27 to 30, 2026
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- WHY SUPPORT -->
+<section class="why-support" id="support" aria-label="Why your support matters">
+<div class="container why-grid">
+<div>
+<p class="section-label">Where Funds Go</p>
+<h2 class="section-title">Why Your Support Matters</h2>
+<p class="section-sub">The team needs to raise $4,200 to help cover the cost of getting to World Finals. Every donation helps remove a barrier and gives these students the chance to compete, grow, and create unforgettable memories.</p>
+<div class="cost-cards">
+<div class="cost-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/></svg></span>
+Team registration &amp; prop transportation
+</div>
+<div class="cost-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span>
+Airfare for students and chaperones
+</div>
+<div class="cost-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 001 1h3v-6h6v6h3a1 1 0 001-1V10"/></svg></span>
+Lodging and meals for students
+</div>
+<div class="cost-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+Travel and supervision for chaperones
+</div>
+</div>
+</div>
+<div class="why-img-wrap">
+<img src="images/team-photo.webp" alt="Longleaf Elementary OM team group photo" width="800" height="602" loading="lazy">
+</div>
+</div>
+</section>
+
+<!-- DONATION BAND -->
+<section class="donate-band" aria-label="Donate">
+<div class="container">
+<h2>Help Us Reach Our $4,200 Goal</h2>
+<p>Whether you give as an individual, a family, or a local business, your support helps send Longleaf's team to World Finals.</p>
+<div class="progress-wrap">
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+<div class="progress-labels"><span>$0 raised</span><span>$4,200 goal</span></div>
+</div>
+<a href="https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368" class="btn btn-primary" target="_blank" rel="noopener">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
+Give Today
+</a>
+</div>
+</section>
+
+<!-- SPONSORS -->
+<section class="sponsors" id="sponsors" aria-label="Sponsorship levels">
+<div class="container">
+<div style="text-align:center">
+<p class="section-label">Make an Impact</p>
+<h2 class="section-title" style="margin-left:auto;margin-right:auto;text-align:center">Sponsor the Team</h2>
+<p class="section-sub" style="margin:0 auto 8px">Businesses and community supporters can sponsor the trip at different levels.</p>
+</div>
+<div class="sponsor-cards">
+<div class="sponsor-card">
+<div class="amount">$50</div>
+<div class="tier">Supporter</div>
+<p>Thank-you card from the team</p>
+<a href="https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368" class="btn btn-outline" style="margin-top:24px;width:100%;justify-content:center" target="_blank" rel="noopener">Give $50</a>
+</div>
+<div class="sponsor-card featured">
+<div class="amount">$100</div>
+<div class="tier">Community Sponsor</div>
+<p>Name listed on the team flyer and social media recognition</p>
+<a href="https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368" class="btn btn-primary" style="margin-top:24px;width:100%;justify-content:center" target="_blank" rel="noopener">Give $100</a>
+</div>
+<div class="sponsor-card">
+<div class="amount">$200+</div>
+<div class="tier">Team Sponsor</div>
+<p>Business name or logo featured on the team's competition shirts</p>
+<a href="https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368" class="btn btn-outline" style="margin-top:24px;width:100%;justify-content:center" target="_blank" rel="noopener">Give $200+</a>
+</div>
+</div>
+<p style="text-align:center;margin-top:24px;color:var(--gray-600);font-size:0.95rem">Every gift helps fuel creativity, confidence, and opportunity for these students.</p>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" aria-label="Photo gallery">
+<div class="container">
+<div style="text-align:center">
+<p class="section-label">Our Journey</p>
+<h2 class="section-title" style="text-align:center">The Team in Action</h2>
+</div>
+<div class="gallery-grid">
+<img src="images/trophy-walk.webp" alt="Team walking proudly with trophy" width="600" height="797" loading="lazy">
+<img src="images/backstage.webp" alt="Team getting ready backstage with props" width="600" height="797" loading="lazy">
+<img src="images/team-gym2.webp" alt="Team with medals at competition" width="600" height="451" loading="lazy">
+<img src="images/team-lineup.webp" alt="Team lined up at school" width="600" height="451" loading="lazy">
+</div>
+</div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="community" id="community" aria-label="Community impact">
+<div class="container comm-grid">
+<div>
+<p class="section-label">Beyond the Competition</p>
+<h2 class="section-title">Support Local Students Doing Something Amazing</h2>
+<p class="section-sub">This fundraiser is about more than one trip. It is about encouraging young students to dream big, work together, and see what is possible when creativity and perseverance come together.</p>
+<div class="value-cards">
+<div class="value-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+<h4>Student Confidence</h4>
+<p>Building self-belief through creative achievement</p>
+</div>
+<div class="value-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></span>
+<h4>Teamwork</h4>
+<p>Learning to collaborate and solve problems together</p>
+</div>
+<div class="value-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span>
+<h4>Creative Problem Solving</h4>
+<p>Thinking outside the box under real pressure</p>
+</div>
+<div class="value-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
+<h4>Once-in-a-Lifetime Experience</h4>
+<p>Memories and lessons that last forever</p>
+</div>
+</div>
+</div>
+<div class="why-img-wrap">
+<img src="images/backstage2.webp" alt="Students in costume preparing for performance" width="600" height="797" loading="lazy">
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" aria-label="Frequently asked questions">
+<div class="container">
+<div style="text-align:center">
+<p class="section-label">Questions?</p>
+<h2 class="section-title" style="text-align:center">Frequently Asked Questions</h2>
+</div>
+<div class="faq-list">
+<div class="faq-item">
+<button class="faq-q" aria-expanded="false">What is Odyssey of the Mind?<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+<div class="faq-a"><p>Odyssey of the Mind is an international creative problem-solving program that helps students build teamwork, imagination, and hands-on problem-solving skills.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q" aria-expanded="false">Why is the team fundraising?<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+<div class="faq-a"><p>The team is raising money to cover World Finals costs, including registration, prop transportation, airfare, lodging, meals, and chaperone travel.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q" aria-expanded="false">How much is the fundraising goal?<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+<div class="faq-a"><p>The goal is $4,200.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q" aria-expanded="false">Where and when is World Finals?<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+<div class="faq-a"><p>The 2026 Odyssey of the Mind World Finals will be held in Ames, Iowa, May 27 through May 30, 2026.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q" aria-expanded="false">Can businesses sponsor the team?<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+<div class="faq-a"><p>Yes. Businesses can support the team at different sponsorship levels, including recognition on flyers, social media, and competition shirts.</p></div>
+</div>
+<div class="faq-item">
+<button class="faq-q" aria-expanded="false">Who do I contact with questions?<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+<div class="faq-a"><p>You can contact coaches Marie Infante at ChrisMarie1125@gmail.com or Rachelle Babcock at Rachellelynnbabcock@gmail.com.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact" aria-label="Contact information">
+<div class="container">
+<p class="section-label" style="color:var(--gold-light)">Get in Touch</p>
+<h2>Ready to Help?</h2>
+<p>To sponsor the team or ask questions, please contact the coaches.</p>
+<div class="contact-cards">
+<div class="contact-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg></span>
+<h4>Marie Infante</h4>
+<a href="mailto:ChrisMarie1125@gmail.com">ChrisMarie1125@gmail.com</a>
+</div>
+<div class="contact-card">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg></span>
+<h4>Rachelle Babcock</h4>
+<a href="mailto:Rachellelynnbabcock@gmail.com">Rachellelynnbabcock@gmail.com</a>
+</div>
+</div>
+<a href="https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368" class="btn btn-primary" target="_blank" rel="noopener">
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
+Donate Now
+</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container">
+<p>&copy; 2026 Longleaf Elementary Odyssey of the Mind. All donations go directly toward World Finals expenses.</p>
+</div>
+</footer>
+
+<script defer>
+// Nav scroll effect
+window.addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');btn.setAttribute('aria-expanded',!wasOpen)})});
+
+// Progress bar animation on scroll
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.getElementById('progressFill').style.width='35%';obs.disconnect()}})},{threshold:0.5});
+obs.observe(document.querySelector('.progress-wrap'));
+
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')})});
+</script>
+
+</body>
+</html>
