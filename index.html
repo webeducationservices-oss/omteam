@@ -599,8 +599,10 @@ document.getElementById('donateForm').addEventListener('submit',async function(e
   btn.disabled=true;btn.textContent='Submitting...';
   try{
     if(typeof grecaptcha!=='undefined'){
-      const token=await grecaptcha.execute('6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh',{action:'donation'});
-      document.getElementById('recaptcha_token').value=token;
+      try{
+        const token=await grecaptcha.execute('6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh',{action:'donation'});
+        document.getElementById('recaptcha_token').value=token;
+      }catch(re){console.warn('reCAPTCHA error:',re)}
     }
     const formData=new FormData(this);
     const data=Object.fromEntries(formData.entries());
