@@ -218,7 +218,7 @@ Longleaf OM
 <a href="#sponsors">Sponsor</a>
 <a href="#faq">FAQ</a>
 <a href="#contact">Contact</a>
-<a href="#" onclick="document.getElementById('donateModal').classList.add('open');return false" class="nav-cta">Donate</a>
+<a href="#" onclick="return openDonateModal()" class="nav-cta">Donate</a>
 </div>
 <button class="mobile-toggle" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></span>
@@ -241,7 +241,7 @@ World Finals &mdash; Ames, Iowa &bull; May 27&ndash;30, 2026
 <h1>Help Send Longleaf Elementary's OM Team to World Finals</h1>
 <p class="hero-sub">The team finished 3rd at the Florida State Competition and has been invited to compete at the 2026 Odyssey of the Mind World Finals. They are raising $4,200 to help make the trip possible.</p>
 <div class="hero-btns">
-<a href="#" onclick="document.getElementById('donateModal').classList.add('open');return false" class="btn btn-primary">
+<a href="#" onclick="return openDonateModal()" class="btn btn-primary">
 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
 Donate to Support the Team
 </a>
@@ -358,7 +358,7 @@ Lodging and meals for students
 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 <div class="progress-labels"><span>$863 raised</span><span>$4,200 goal</span></div>
 </div>
-<a href="#" onclick="document.getElementById('donateModal').classList.add('open');return false" class="btn btn-primary">
+<a href="#" onclick="return openDonateModal()" class="btn btn-primary">
 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
 Give Today
 </a>
@@ -378,19 +378,19 @@ Give Today
 <div class="amount">$50</div>
 <div class="tier">Supporter</div>
 <p>Thank-you card from the team</p>
-<a href="#" onclick="document.getElementById('donateModal').classList.add('open');return false" class="btn btn-outline" style="margin-top:24px;width:100%;justify-content:center">Give $50</a>
+<a href="#" onclick="openDonateModal('50')" class="btn btn-outline" style="margin-top:24px;width:100%;justify-content:center">Give $50</a>
 </div>
 <div class="sponsor-card featured">
 <div class="amount">$100</div>
 <div class="tier">Community Sponsor</div>
 <p>Name listed on the team flyer and social media recognition</p>
-<a href="#" onclick="document.getElementById('donateModal').classList.add('open');return false" class="btn btn-primary" style="margin-top:24px;width:100%;justify-content:center">Give $100</a>
+<a href="#" onclick="openDonateModal('100')" class="btn btn-primary" style="margin-top:24px;width:100%;justify-content:center">Give $100</a>
 </div>
 <div class="sponsor-card">
 <div class="amount">$200+</div>
 <div class="tier">Team Sponsor</div>
 <p>Business name or logo featured on the team's competition shirts</p>
-<a href="#" onclick="document.getElementById('donateModal').classList.add('open');return false" class="btn btn-outline" style="margin-top:24px;width:100%;justify-content:center">Give $200+</a>
+<a href="#" onclick="openDonateModal('200')" class="btn btn-outline" style="margin-top:24px;width:100%;justify-content:center">Give $200+</a>
 </div>
 </div>
 <p style="text-align:center;margin-top:24px;color:var(--gray-600);font-size:0.95rem">Every gift helps fuel creativity, confidence, and opportunity for these students.</p>
@@ -503,7 +503,7 @@ Give Today
 <a href="mailto:Rachellelynnbabcock@gmail.com">Rachellelynnbabcock@gmail.com</a>
 </div>
 </div>
-<a href="#" onclick="document.getElementById('donateModal').classList.add('open');return false" class="btn btn-primary">
+<a href="#" onclick="return openDonateModal()" class="btn btn-primary">
 <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></span>
 Donate Now
 </a>
@@ -516,12 +516,13 @@ Donate Now
 <div class="modal-overlay" id="donateModal">
 <div class="modal">
 <button class="modal-close" id="modalClose" aria-label="Close"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span></button>
-<h3>Support the Team</h3>
+<h3 id="modalTitle">Support the Team</h3>
 <p class="modal-sub">Enter your info below, then you'll be taken to PayPal to complete your donation.</p>
 <form id="donateForm">
 <input type="hidden" name="site_slug" value="omteam">
 <input type="hidden" name="form_type" value="donation">
 <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+<input type="hidden" name="amount" id="donateAmount">
 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 <label for="full_name">Full Name</label>
 <input type="text" id="full_name" name="full_name" required placeholder="Your name">
@@ -560,6 +561,12 @@ obs.observe(document.querySelector('.progress-wrap'));
 document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open')})});
 
 // Donate modal
+function openDonateModal(amount){
+document.getElementById('donateAmount').value=amount||'';
+document.getElementById('modalTitle').textContent=amount?'Give $'+amount:'Support the Team';
+document.getElementById('donateModal').classList.add('open');
+return false;
+}
 document.getElementById('modalClose').addEventListener('click',()=>{document.getElementById('donateModal').classList.remove('open')});
 document.getElementById('donateModal').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open')});
 
@@ -568,7 +575,8 @@ e.preventDefault();
 if(this.querySelector('[name="_honey"]').value)return;
 const btn=this.querySelector('[type="submit"]');
 btn.disabled=true;btn.textContent='Submitting...';
-const paypalUrl='https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368';
+const amt=document.getElementById('donateAmount').value;
+const paypalUrl='https://www.paypal.com/donate/?hosted_button_id=E2ENWG8EXG368'+(amt?'&amount='+amt:'');
 try{
 if(typeof grecaptcha!=='undefined'){
 try{
