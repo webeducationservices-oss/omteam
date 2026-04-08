@@ -584,7 +584,12 @@ window.addEventListener('scroll',()=>{document.getElementById('nav').classList.t
 document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open');btn.setAttribute('aria-expanded',!wasOpen)})});
 
 // Progress bar animation on scroll
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.getElementById('progressFill').style.width='21%';obs.disconnect()}})},{threshold:0.5});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){
+const labels=document.querySelectorAll('.progress-labels span');
+const raised=parseFloat(labels[0].textContent.replace(/[^0-9.]/g,''))||0;
+const goal=parseFloat(labels[1].textContent.replace(/[^0-9.]/g,''))||4200;
+document.getElementById('progressFill').style.width=Math.min(100,Math.round(raised/goal*100))+'%';
+obs.disconnect()}})},{threshold:0.5});
 obs.observe(document.querySelector('.progress-wrap'));
 
 // Close mobile nav on link click
