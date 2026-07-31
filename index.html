@@ -13,7 +13,7 @@
 <link rel="preload" as="font" type="font/woff2" href="fonts/montserrat-700.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/inter-400.woff2" crossorigin>
 <link rel="preload" as="image" type="image/webp" href="images/hero-v2.webp" fetchpriority="high">
-<script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lck8aQsAAAAALMA-T6nwfkSf7bv4K-mOhkszeKh"></script>
 <style>
 @font-face{font-family:'Montserrat';src:url('fonts/montserrat-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
 @font-face{font-family:'Montserrat';src:url('fonts/montserrat-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
@@ -667,7 +667,7 @@ document.getElementById('donateForm').addEventListener('submit',async function(e
   try{
     if(typeof grecaptcha!=='undefined'){
       try{
-        const token=await grecaptcha.execute('6Lck8aQsAAAAAlMA-T6nwfkSf7bv4K-mOhkszeKh',{action:'donation'});
+        const token=await grecaptcha.execute('6Lck8aQsAAAAALMA-T6nwfkSf7bv4K-mOhkszeKh',{action:'donation'});
         document.getElementById('recaptcha_token').value=token;
       }catch(re){console.warn('reCAPTCHA error:',re)}
     }
